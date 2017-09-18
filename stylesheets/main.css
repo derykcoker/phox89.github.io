@@ -1,12 +1,16 @@
-.News-Section {
+* .News-Section {
     color: white;
     background-color: #556B2E;
     height: auto;
     width: 300px;
     padding: 15px;
-    margin: 50px;
+    marigin: 50px;
     border: 2px solid white;
   }
+img.Main {
+    margin: 10px;
+    border: 2px solid white;
+}
 .Main {
     color: White;
     background-color: #6B8E23;
