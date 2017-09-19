@@ -4,15 +4,15 @@
     height: auto;
     width: 300px;
     padding: 15px;
-    margin: 50px;
+    margin: 50px 0px;
     border: 2px solid white;
   }
 .Main {
-    color: White;
+    color: white;
     background-color: #6B8E23;
     padding: 30px;
 }
 img.Main {
-    border: 1px solid white;
-    
+    border: 10px solid white;
+
 }
