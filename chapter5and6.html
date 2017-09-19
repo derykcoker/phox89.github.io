@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Images and Tables</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1 id="top">HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="chapter10.html">Chapter 10</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div>
+      <h2>Chapter 5: Images and Chapter 6: Tables</h2>
+      <p>Images are fairly straight forward. There is some code to help
+         organize them better, however the book states you are better off
+         organizing them with CSS so currently I will not be worrying about
+         trying to give them better placement. <br /> To add an image, you will
+         want to type the following: </br>
+         &#60img src="url to image" alt="alternate text to show if the image is
+         unable to load" title="title of image that shows when mouse hovered
+         over" /&#62</p>
+         <p>You can also use &$60figure&#62 surrounding the code with the image.
+            Inside this code you can include <strong>&#60figcaption&#62</strong>
+            to include a caption under the image.
+         <br />
+         <figure>
+           <img src="http://images.media-allrecipes.com/userphotos/250x250/65725.jpg"
+           alt="A freshly baked batch of delicious cinnamon rolls" title="A freshly
+           baked batch of delicious cinnamon rolls" />
+           <figcaption>Look at those delicious rolls!</figcaption>
+         </figure>
+         <p>&#60table&#62, &#60tr&#62 (table row), and &#60td&#62 (table data) are
+            used to create tables. Use <strong>table</strong> to start a table,
+            <strong>tr</strong> to start a new row, and <strong>td</strong> to
+            enter data into a table cell.</p><br />
+         <p>To title rows/columns you can use <strong>table heading</strong>. The
+             code looks like &#60th scope="col"&#62 or &#60th scope="row"&#62</p>
+         <br />
+         <p>To help organize your code, you can use &#60thead&#62 in the section
+            of code to section off the head. As well as &#60tbody&#62 for the main
+            area of cells, and &#60tfoot&#62 for the last row(s).</p><br />
+         <p>Lastly, you can use &#60td colspan="2"&#62 or &#60td rowspan="2"&#62
+            to have your data span across multiple rows or columns. Below are a couple
+            tables showing the use of all these tags.</p><br />
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Breakfast</th>
+            <td colspan="2">Cereal</th>
+            <td>Eggs</td>
+          </tr>
+          <tr>
+            <th scope="row">Lunch</th>
+            <td>Sandwhich</td>
+            <td rowspan="2">Chicken and Vegetables</td>
+          </tr>
+          <tr>
+            <th scope="row">Dinner</th>
+            <td>Spaghetti</td>
+            <td>Steak</td>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

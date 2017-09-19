@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forms and Markup</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1 id="top">HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="chapter10.html">Chapter 10</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div>
+      <h2>Chapter 7: Forms</h2>
+      <p>Here we have a wealth of information that I have not used yet. I imagine
+         a lot of it I will not need to use for a long time, but there's no harm
+         in learning it now (and having this page to reference later.)</p><br />
+      <h4>Form Structure</h4>
+      <p>&#60form action="http://www.example.com/subscribe.php" method="get" /&#62
+         <br />
+         Form controls<br />
+         &#60/form&#62 <br/>
+         Every form requires an action. The action page is the URL that will receive
+         the information in the form once it's submitted. <br/>
+         The method will be either <strong>get</strong>(default value if undefined)
+         or <strong>post.</strong> In general, get will be used for:
+         <ul>
+           <li>short forms like search boxes</li>
+           <li>when just retrieving data from a server</li>
+        </ul>
+        <br />
+         Post method will send values in what are known as <strong>HTTP Headers.</strong> Should use post for:
+         <ul>
+           <li>user uploadsing a file</li>
+           <li>longer form</li>
+           <li>sensitive data like passwords</li>
+           <li>adds or deletes information from a database</li>
+         </ul>
+      </p>
+      <h4>Text Input</h4>
+      <form action="http://www.example.com/login.php">
+        <p>Username:
+          <input type="text" name="username" size="15" maxlength="30" />
+        </p>
+      </form>
+      <br />
+      <p>This form can be achieved by adding &#60input type="text" name="username"
+         sizxe="15" maxlength="30" /&#62 between the opening and closing form tags.
+         Size is no longer used, and should instead have the size of the box changed
+         using CSS.</p><br />
+      <h4>Password Input</h4>
+      <form action="http://www.example.com/login.php">
+        <p>Username:
+          <input type="text" name="username" maxlength="30" />
+        </p>
+        <p>Password:
+          <input type="password" name="password" maxlength="30" />
+        </p>
+      </form>
+      <p>This form is achieved by &#60input type="password" name="password"
+         maxlength="30" /&#62<br />
+         While the password input type hides the characters from view, it is not
+         a secure way to hide information. If you need a secure method, use SSL
+         for things like credit card information.
+      </p>
+      <h4>Text Area</h4>
+      
+    </div>
+  </body>
+</html>
