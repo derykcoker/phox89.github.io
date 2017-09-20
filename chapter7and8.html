@@ -21,23 +21,25 @@
     </nav>
     <hr />
     <!-- Main Body Notes -->
-    <div>
+    <div class="chapter">
       <h2>Chapter 7: Forms</h2>
       <p>Here we have a wealth of information that I have not used yet. I imagine
          a lot of it I will not need to use for a long time, but there's no harm
          in learning it now (and having this page to reference later.)</p><br />
+    </div>
+    <div class="form-structure">
       <h4>Form Structure</h4>
-      <p>&#60form action="http://www.example.com/subscribe.php" method="get" /&#62
-         <br />
-         Form controls<br />
-         &#60/form&#62 <br/>
-         Every form requires an action. The action page is the URL that will receive
-         the information in the form once it's submitted. <br/>
-         The method will be either <strong>get</strong>(default value if undefined)
-         or <strong>post.</strong> In general, get will be used for:
-         <ul>
-           <li>short forms like search boxes</li>
-           <li>when just retrieving data from a server</li>
+        <p>&#60form action="http://www.example.com/subscribe.php" method="get" /&#62
+        <br />
+           Form controls<br />
+           &#60/form&#62 <br/>
+           Every form requires an action. The action page is the URL that will receive
+           the information in the form once it's submitted. <br/>
+           The method will be either <strong>get</strong>(default value if undefined)
+           or <strong>post.</strong> In general, get will be used for:
+        <ul>
+         <li>short forms like search boxes</li>
+         <li>when just retrieving data from a server</li>
         </ul>
         <br />
          Post method will send values in what are known as <strong>HTTP Headers.</strong> Should use post for:
@@ -47,35 +49,170 @@
            <li>sensitive data like passwords</li>
            <li>adds or deletes information from a database</li>
          </ul>
-      </p>
+        </p>
+    </div>
+    <div class="text-input">
       <h4>Text Input</h4>
       <form action="http://www.example.com/login.php">
         <p>Username:
           <input type="text" name="username" size="15" maxlength="30" />
         </p>
       </form>
-      <br />
-      <p>This form can be achieved by adding &#60input type="text" name="username"
-         sizxe="15" maxlength="30" /&#62 between the opening and closing form tags.
-         Size is no longer used, and should instead have the size of the box changed
-         using CSS.</p><br />
-      <h4>Password Input</h4>
-      <form action="http://www.example.com/login.php">
-        <p>Username:
-          <input type="text" name="username" maxlength="30" />
-        </p>
-        <p>Password:
-          <input type="password" name="password" maxlength="30" />
-        </p>
-      </form>
-      <p>This form is achieved by &#60input type="password" name="password"
-         maxlength="30" /&#62<br />
-         While the password input type hides the characters from view, it is not
-         a secure way to hide information. If you need a secure method, use SSL
-         for things like credit card information.
-      </p>
+        <br />
+        <p>This form can be achieved by adding &#60input type="text" name="username"
+          size="15" maxlength="30" /&#62 between the opening and closing form tags.
+          Size is no longer used, and should instead have the size of the box changed
+          using CSS.</p><br />
+      </div>
+      <div class="password-input">
+        <h4>Password Input</h4>
+          <form action="http://www.example.com/login.php">
+            <p>Username:
+              <input type="text" name="username" maxlength="30" />
+            </p>
+            <p>Password:
+              <input type="password" name="password" maxlength="30" />
+            </p>
+          </form>
+          <p>This form is achieved by &#60input type="password" name="password"
+             maxlength="30" /&#62<br />
+             While the password input type hides the characters from view, it is not
+             a secure way to hide information. If you need a secure method, use SSL
+             for things like credit card information.
+          </p>
+      </div>
+      <div>
       <h4>Text Area</h4>
-      
-    </div>
+        <form action="http://www.example.com/comments.php">
+          <p>What did you think of this gig?</p>
+          <textarea name="comments" cols="20" rows="4">Enter
+          your comments...</textarea>
+        </form>
+        <br />
+        <p>You can use <strong>&#60textarea&#62</strong>to create an input that
+           will include multiple lines. The code above looks like the following:
+           <br/>
+           &#60textarea name="comments" cols="20" rows="4"&#62Enter
+           your comments...&#60/textarea&#62
+           <br />
+           You don't need to use the rows and columns tags, instead you should use
+           CSS to control the height/width of the text box.<p>
+      </div>
+      <div class="radio-button">
+      <h4>Radio Button</h4>
+        <form action="http://www.example.com/profile.php">
+          <p>Please select your favorite genre:
+            <br />
+            <input type="radio" name="genre" value="rock"
+            checked="checked" /> Rock
+            <input type="radio" name="genre" value="pop" />
+            Pop
+            <input type="radio" name="genre" value="jazz" />
+            Jazz
+          </p>
+        </form>
+        <p>Input type <strong>Radio</strong> is used for the above code. Can only
+           select one option, cannot deselect. Looks like the following: <br/>
+           &#60input type="radio" name="genre" value="rock" checked="checked" /&#62
+           Rock<br />
+           You will need to create one line of these for each option, changing only the
+           value each time. The text to appear next to each button will be whatever
+           you type right after the "greater than" bracket.</p>
+      </div>
+      <div class="checkbox">
+        <h4>Checkbox</h4>
+          <form action="http://www.example.com/profile.php">
+            <p>Please select your favorite music service(s):
+              <br />
+              <input type="checkbox" name="service"
+              value="itunes" checked="checked" /> iTunes
+              <input type="checkbox" name="service"
+              value="lastfm" /> Last.fm
+              <input type="checkbox" name="service"
+              value="spotify" /> Spotify
+            </p>
+          </form>
+          <p>The <strong>Checkbox</strong> input type uses the same code as <strong>
+             Radio</strong>, except as you probably could guess, inputput="checkbox".</p>
+      </div>
+      <div class="drowdown=list">
+        <h4>Dropdown List Box</h4>
+          <form action="http://www.example.com/profile.php">
+            <p>What device do you listen to music on?</p>
+            <select name="devices">
+              <option value="ipod">iPod</option>
+              <option value="radio">Radio</option>
+              <option value="computer">Computer</option>
+            </select>
+          </form>
+          <p>The <strong>Drowdown List Box</strong> should be used instead of radio
+             buttons if you have a long list of options. The code looks like the following:
+             <br />
+              &#60form action="http://www.example.com/profile.php"&#62<br />
+                &#60p&#62What device do you listen to music on?&#60/p&#62<br />
+                &#60select name="devices"&#62<br />
+                  &#60option value="ipod"&#62iPod&#60/option&#62<br />
+                  &#60option value="radio"&#62Radio&#60/option&#62<br />
+                  &#60option value="computer"&#62Computer&#60/option&#62<br />
+                &#60/select&#62<br />
+              &#60/form&#62</p>
+      </div>
+      <div class="multiple-select-box">
+        <h4>Multiple Select Box</h4>
+          <form action="http://www.example.com/profile.php">
+            <p>Do you play any of the following instruments?
+              (You can select more than one option by holding
+              down control on a PC or command key on a Mac
+              while selecting different options.)</p>
+              <select name="instruments" size="3"
+              multiple="multiple">
+                <option value="guitar" selected="selected">
+                  Guitar</option>
+                <option value="drums">Drums</option>
+                <option value="keyboard"
+                  selected="selected">Keyboard</option>
+                <option value="bass">Bass</option>
+              </select>
+          </form>
+          <p>You can use a <strong>Multiple Selection Box</strong>when you have
+             a longer list of options. Eventually I will learn better ways to
+             choose from multiple options, but for now this will do as a learning
+             tool. The code looks like the following:
+             &#60form action="http://www.example.com/profile.php"&#62<br />
+               &#60p&#62Do you play any of the following instruments? (You can select
+               multiple options by holding down the control key on a PC or the
+               command key on a MAC.)&#60p&#62<br />
+               &#60select name=instruments" size="3" multiple="multiple"&#62<br />
+                 &#60option value="guitar" sellected="selected"&#62Guitar&#60/option&#62<br />
+                 &#60option value="drums"&#62Drums&#60/option&#62<br />
+                 &#60option value="heyboard"&#62Keyboard&#60/option&#62<br />
+                 &#60option value="bass"&#62Bass&#60/option&#62<br />
+               &#60/select&#62<br />
+            &#60/form&#62</p>
+      </div>
+      <hr />
+      <div class="file-input-box">
+        <h4>File Input Box</h4>
+          <form action="http://www.example.com/upload.php"
+          method="post">
+            <p>Upload your song in MP3 format:</p>
+            <input type="file" name="user-song" /><br />
+            <input type="submit" value="Upload" />
+          </form>
+          <p>The <strong>File Input Box</strong>can be used for uploading any
+             type of file to a server/website. When using this code, when entering
+             the &#60form&#62 tag, the method must be equal to post. <br />
+             &#60input type="file" name="whatever you would like" /&#62<br>
+             Under this code you will need to add another line which allows you
+             to submit the file. You can include a name="whatever" attribute if you like,
+             but it is not necessary.<br />
+             &#60input type="submit" value="Whatever text you would like to appear" /&#62</p>
+      </div>
+      <div class="image-button">
+        <h4>Image Button</h4>
+        <p>In order to create an <strong>Image Button</strong> all you have to <!DOCTYPE html>
+           is use the following code: <br/>
+           &#60input type="image" src="image_source.jpg" /&#62<br />
+           You can also add height/width attributes.</p>
   </body>
 </html>
