@@ -85,8 +85,7 @@
       <h4>Text Area</h4>
         <form action="http://www.example.com/comments.php">
           <p>What did you think of this gig?</p>
-          <textarea name="comments" cols="20" rows="4">Enter
-          your comments...</textarea>
+          <textarea name="comments" cols="20" rows="4">Enter your comments...</textarea>
         </form>
         <br />
         <p>You can use <strong>&#60textarea&#62</strong>to create an input that
@@ -133,7 +132,7 @@
             </p>
           </form>
           <p>The <strong>Checkbox</strong> input type uses the same code as <strong>
-             Radio</strong>, except as you probably could guess, inputput="checkbox".</p>
+             Radio</strong>, except as you probably could guess, input type="checkbox".</p>
       </div>
       <div class="drowdown=list">
         <h4>Dropdown List Box</h4>
@@ -214,5 +213,29 @@
            is use the following code: <br/>
            &#60input type="image" src="image_source.jpg" /&#62<br />
            You can also add height/width attributes.</p>
+      </div>
+      <div class="button">
+        <h4>Button</h4>
+          <p><strong>Button</strong> can be used to combine text and images, this
+             way you can use on image for multiple buttons. <br />
+             &#60button&#62&#60img src="image_source.jpg" /&#62Text
+             added to button&#60/button&#62<br />
+          </p>
+      </div>
+      <div class="labels">
+        <h4>Labels</h4>
+          <form action="http://www.example.com/whatever.php">
+          <label>Age: <input type="text" name="age" /></label>
+            <br/ >
+            Gender:
+            <input id="female" type="radio" name="gender"
+            value="f">
+            <label for="female">Female</label>
+            <input id="male" type="radio" name="gender"
+            value="m">
+            <label for="male">Male</label>
+          </form>
+          <p><strong>Label</strong> should be used to add text next to forms,
+             instead of using a p tag.
   </body>
 </html>
