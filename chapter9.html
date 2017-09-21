@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1>HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="chapter10.html">Chapter 10</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div class="chapter">
+      <h2>Chapter 9: Flash, Video, and Audio</h2>
+        <p>Although flash does not have as large of a presence as it used to, I
+           feel like I should still know how to embed it into a page.</p>
+    </div>
+    <div class="flash">
+      <h4>Embedding Flash</h4>
+        <p>Adding flash can be easily done with the <strong>embed</strong> element,
+           which is what I will show today. Later on, Javascript can be used to
+           embed files which seems like the better way to go.<br />
+           I opened the source page to find a direct link to this swf file for testing
+           purposes.</p><br />
+        <embed src="http://www.albinoblacksheep.com/flash10/games/run(www.albinoblacksheep.com).swf">
+        <p>The code used here:<br />
+           &#60embed src="linktoswffile.swf"&#62</p>
+    </div>
+    <div class="video">
+      <h4>HTML5 Video</h4>
+        <p>Embedding HTML5 video is fairly straightforward. One thing to be aware
+           of, there are 2 formats suported by different browsers.</p>
+           <ul>
+             <li>H264</li>
+               <ul>
+                 <li>Internet Explorer</li>
+                 <li>Safari</li>
+               </ul>
+             <li>WebM</li>
+               <ul>
+                 <li>Android</li>
+                 <li>Chrome</li>
+                 <li>Firefox</li>
+                 <li>Opera</li>
+               </ul>
+           </ul>
+        <p>Below is an MP4 video which should be able to play no problem.</p><br />
+        <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" width="640" height="360"
+          preload="auto" controls><br>
+        <p>For the video, I only used a few attributes. The structure is the same as
+           for images. Below are all of the important attributes listed.</p>
+        <ul>
+          <li>poster="image.jpg" - Used to show a still image before video loads
+              user presses play.</li>
+          <li>width, height - obvious</li>
+          <li>preload=none, auto, metadata - Doesn't load video until play is pressed,
+              preloads video when page loads, or only preloads the size, first frame,
+              track list, and duration.</li>
+          <li>controls - adds controls for the video</li>
+          <li>autoplay - file should play automatically.</li>
+          <li>loop - video should loop once completed.</li>
+      </div>
+      <div class="multi-video">
+        <h4>Multiple Video Sources</h4>
+          <p>When using multiple video sources, you need to take some precaution.
+             It's best to include the video type, and codecs used. Below is an
+             example of how to do this. <strong>Take notice of when " is used, as
+             well as '</strong> Also take note that .mp4 comes first, because
+             iPads are picky.<br />
+             &#60video poster="images/puppy.jpg" width="400"<br />
+             height="320" preload controls loop&#62<br />
+             &#60source src="video/puppy.mp4" type='video/<br />
+             mp4;codecs="avc1.42E01E, mp4a.40.2"' /&#62<br />
+             &#60source src="video/puppy.webm" type='video/<br />
+             webm;codecs="vp8, vorbis"' /&#62<br />
+             &#60p&#62A video of a puppy playing in the snow&#60/p&#62<br />
+             &#60/video&#62</p><br />
+      </div>
+      <div class="audio">
+        <h4>Audio</h4>
+          <p>We can add audio using flash mp3 players, or a default browser player. If
+             you want to use flash, the best method would be uploading your file
+             to a website like soundcloud and using their embedding code. But if
+             you want to use your own code, you can use &#60audio&#62<br />
+             Using this code, below is a sound made by a rattlesnake.<br />
+             <audio src="http://www.noiseaddicts.com/samples_1w72b820/336.mp3" controls /><br />
+             Inside the audio code, you can use the same attributes as you can for video
+             files. If you want, you can setup the code as follows to include multiple
+             sources, so the browser will play whichever one is supported.<br />
+             &#60audio controls autoplay&#62<br />
+               &#60source src="audio/test-audio.ogg" /&#62<br />
+               &#60source src="audio/test-audio.mp3" /&#62<br />
+               &#60p>This browser does not support our audio format.&#60/p&#62<br />
+             &#60/audio&#62</p><br />
+      </div>
+      <hr />
+      <!-- Footer Section -->
+      <footer>
+      <h3>HTML Notes</h3>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h3>CSS Notes</h3>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10.html">Chapter 10</a>
+      </nav>
+      </body>
+      </html>
