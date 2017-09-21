@@ -20,8 +20,9 @@
       <a href="chapter10.html">Chapter 10</a>
     </nav>
     <hr />
+    <a href="#chapter8">Jump to Chapter 8</a>
     <!-- Main Body Notes -->
-    <div class="chapter">
+    <div class="chapter7" id="chapter7">
       <h2>Chapter 7: Forms</h2>
       <p>Here we have a wealth of information that I have not used yet. I imagine
          a lot of it I will not need to use for a long time, but there's no harm
@@ -236,6 +237,166 @@
             <label for="male">Male</label>
           </form>
           <p><strong>Label</strong> should be used to add text next to forms,
-             instead of using a p tag.
+             instead of using a p tag. For reference, the following text is taken
+             from W3 Schools.<br />
+             The &#60label&#62 tag defines a label for an &#60input&#62 element.
+             The &#60label&#62 element does not render as anything special for the user. <br />
+             However, it provides a usability improvement for mouse users, because
+             if the user clicks on the text within the &#60label&#62 element, it toggles the
+             control.<br />
+             So basically, when you click the text inside a label tag, the cursor
+             will jump to the text box and you can type. The code will look like the following:
+             <br />
+             &#60label&#62Age: &#60input type="text" name="age" /&#62&#60/label&#62<br />
+               &#60br/ &#62 <br />
+               Gender: <br />
+               &#60input id="female" type="radio" name="gender" <br />
+               value="f"&#62 <br />
+               &#60label for="female"&#62Female&#60/label&#62<br />
+               &#60input id="male" type="radio" name="gender"<br />
+               value="m"&#62<br />
+               &#60label for="male"&#62Male&#60/label&#62<br />
+               The for attribute of the <label> tag should be equal to the id
+               attribute of the related element to bind them together.
+          </p>
+      </div>
+      <div class="grouping-form-elements">
+        <h4>Grouping Form Elements</h4>
+          <fieldset>
+            <legend>Contact details</legend>
+            <label>Email:<br />
+              <input type="text" name="email" /></label><br />
+            <label>Mobile:<br />
+              <input type="text" name="mobile" /></label><br />
+            <label>Telephone:<br />
+              <input type="text" name="telephone" /></label>
+          </fieldset>
+          <p>Using <strong>fieldset</strong> and <stong>legend</strong>will allow
+             you to group forms together, and give the fieldset a label. <strong>
+             Fieldset</strong> should surroung all of the form code, and <strong>
+             legend</strong> should be placed directly under the opening fieldset tag.
+          </p>
+      </div>
+      <div class="validation">
+        <h4>Form Validation</h4>
+          <p>Inside an input tag, you can add <strong>required="required"</strong>
+             to ensure that the form has been filled in correctly before submitting. This
+             helps reduce server load. Validation should be done with Javascript.
+      </div>
+      <div class="date">
+        <h4>Date Entry</h4>
+          <form action="http://www.example.com/bookings/" method="post">
+            <label for="username">Departure date:</label>
+            <input type="date" name="depart" />
+            <input type="submit" value="Submit" />
+          </form>
+          <p>Can use <strong>&#60input type="date" name="depart" /&#62</strong>
+             for a form that only accepts dates.</p>
+      </div>
+      <div class="email-url">
+        <form action="http://www.example.org/subscribe.php">
+          <p>Please enter your email address:</p>
+          <input type="email" name="email" />
+          <input type="submit" value="Submit" />
+        </form>
+        <form action="http://www.example.org/profile.php">
+          <p>Please enter your website address:</p>
+          <input type="url" name="website" />
+          <input type="submit" value="Submit" />
+        </form>
+        <p>You can use <strong>&#60input type="date"&#62</strong> or <strong>
+           &#60input type="url"&#62</strong> when asking for an email or url. Browsers
+           that support HTML5 Validation will check that the user has entered valid
+           data.</p>
+      </div>
+      <div class="search-input">
+        <h4>Search Input</h4>
+          <form action="http://www.example.org/search.php">
+            <p>Search:</p>
+            <input type="search" name="search" placeholder="Enter keyword" />
+            <input type="submit" value="Search" />
+          </form>
+          <p>The <strong>&#60input type="search"&#62</strong> tag will add a searchbox
+             to your page. You can also include <strong>placeholder="keyword."</strong>
+             The keyword will be shown in the search box until the user clicks the box.</p>
+      </div>
+      <hr />
+      <a href="#chapter7">Back to Chapter 7</a>
+      <hr />
+      <div class="chapter8" id="chapter8">
+        <h2>Chapter 8: Extra Markup</h2>
+        <p>Most of the information here I already know, but there are a few things
+           to write down that are worth noting.</p>
+      </div>
+      <div class="id-attribute">
+        <h4>ID Attribute</h4>
+          <p>ID attribute is known as a global attribute because it can be used
+             on any element. Should always start with an underscore or a letter.
+             An ID should always be unique, especially when styling your page with
+             CSS.</p>
+      </div>
+      <div class="class-attribute">
+        <h4>Class Attribute</h4>
+          <p>The Class attribute is similar to the ID attribute, except it can be
+             reused. Think of it as using one class for multiple paragraphs. You would
+             want them all to have blue text, so in CSS you can change one class to have
+             a diferent text.</p>
+      </div>
+      <div class="block-inline-elements">
+        <h4>Block VS Inline Elements</h4>
+          <p>Block elements are elements that are naturally displayed in a block.
+             For instance, if you were to put two p elements in a row, the second would
+             start on a new line. Some block element examples include: p, h1-h6, ul, and li.</p>
+          <p>Inline elements are elements that will continue on the same lin as neighboring elements.
+             Some examples are: a, b, em, and img.
+      </div>
+      <div class="div">
+        <h4>Div</h4>
+          <p>Although I have been using this tag since I started this site, I should
+             still add a little section on it because of its' importance. The Div element
+             is used to "block" together a group of other elements. Useful for sectioning
+             off things like navigation, a footer, and the main body of your page. With
+             CSS, you can style an entire section when applying a class or id to a
+             div element.</p>
+      </div>
+      <div class="span">
+        <h4>Span</h4>
+          <p>The Span element is usually used in the middle of text to apply a class or id
+             to a section of the text. For instance I could type:<br />
+             &#60span class="spanexample"&#62This piece&#60/span&#62 of text only has a span element
+             around the first 2 words, giving them the class "spanexample".</p>
+      </div>
+      <div class="iframe">
+        <h4>Iframe</h4>
+          <p>No, it's not a Mac only feature. It's used to embed pages into your webpage.
+             Many people use this for google maps, but you can also use it for anything as
+             long as there is a source. The code is fairly simple:<br />
+             &#60iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13433.814939928418!2d-97.14030070921287!3d32.67397794605037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xec11474cefe10eb7!2sFry&#39;s+Electronics!5e0!3m2!1sen!2sus!4v1505945064032"<br/>
+              width="450"<br />
+              height="450"<br />
+              seamless&#62<br />
+             &#60/iframe&#62<br />
+             Will give you this!
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13433.814939928418!2d-97.14030070921287!3d32.67397794605037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xec11474cefe10eb7!2sFry&#39;s+Electronics!5e0!3m2!1sen!2sus!4v1505945064032"
+              width="450"
+              height="450"
+              seamless>
+             </iframe>
+          </p>
+      </div>
+      <div class="page-information">
+        <h4>Page Information</h4>
+          <p>Using the <strong>&#60meta&#62</strong> element, we can give the page
+             a large amount of information. Most of this information gives search
+             engine information about your web page, like a summary or who the
+             author is. Meta is self-closing, some examples are shown below. Refer
+             to <a href="https://www.w3schools.com/tags/tag_meta.asp">this</a> page
+             to see some more tags.<br />
+             &#60meta name="description" content="A page with notes for Chapters 7 and 8" /&#62<br />
+             &#60meta name="keywords" content="HTML5, notes, meta" /&#62 (does not
+             change how search engines will index site.)<br />
+             &#60meta name="author" content="Written by Dr. Fake Name" /&#62<br />
+          </p>
+      </div>  
   </body>
 </html>
