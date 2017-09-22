@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introducing CSS</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1>HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="chapter10.html">Chapter 10</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div class="chapter">
+      <h2>Chapter 10: Introducing CSS</h2>
+        <p>While I have already fone through the track on Codeacademy, I feel
+           like I would still be better off going through this chapter and
+           rewriting anything thats not painfully obvious.</p>
+    </div>
+    <div class="style">
+      <h4>Style Rules</h4>
+      <p>CSS code looks like the following: <br />
+         p {<br />
+           color:white; <br />
+         }<br />
+         In this code, <strong>p</strong> is the selector. <strong>color: white;
+         </strong> is the declaration. In the declaration, <strong>color</strong>
+         is a property, while <strong>white</strong>is a value.</p>
+    </div>
+    <div class="html">
+      <h4>HTML and CSS</h4>
+      <p>There are two ways of adding CSS to an HTML file, you can either link
+         your CSS while with the HTML file, or inject CSS rules directly into the
+         HTML code. If you have multiple pages, it's usually best to create a
+         separate file so that you can reuse your code. This way also makes it
+         easier to make chasnges to code, since you only have to edit one file.<br />
+         To link the files together, you need to add the fopllowing code inside your
+         head element:<br />
+         &#60link href="pathtoCSSfile.css" type="text/css" rel="stylesheet" /&#62<br />
+         The type specifies the type of document being linked, and the rel specifies
+         the relationship between the two files.<br />
+         To add CSS code directly into the HTML file, all you have to do is in the header
+         create &#60style type="text/css"&#62 and &#60/style&#62 elements, with
+         CSS code in the middle.</p>
+    </div>
+    <div class="selectors">
+      <h4>Selectors</h4>
+      <p>Selectors usually follow a rule that the most specific takes precedent.
+         If you have a rule for all p elements, then a rule for only p elements
+         within a class, the p elements within the class will take priority. Below
+         are most of the selectors and how to use them. You can also specify for one
+         rule to always take precedent, by adding !important to the end, but still before
+         the semicolon. <br />
+         Universal Selector: Applies to all elements: * {}<br/>
+         Type Selector: Matches element names: h1, h1, h3 {} - targets all h1, h2, and h3 elements.<br />
+         Class Selector: Targets elements with matching class: .class {} - p.class {} -
+         Targets all classes named "class." Second targets all p elements with class id "class".<br />
+         ID Selector: Same rules as class, except targets ID: #introduction {}<br />
+         Child Selector: Element thats direct child of another: li &#62 a {} - targets only
+         &#60a&#62 elements that are children of &#60li&#62. <br />
+         Descendant Selector: All elements that are descended (child, grandchild, etc): p a {} -
+         Would select all a elements that are nested inside a p element, even if other nested elements between.<br />
+         Adjacent Sibling Selector: Matches element that is next sibling of another: h1+p {} -
+         Targets only first p element after a h1 element, but not the other p elements. <br />
+         General Sibling Selector: Matches all siblings, does not have to be directly preceding: h1~p {} -
+         If theres 2 p elements that are siblings of h1, rule would apply to both.</p>
+    </div>
+    <hr />
+      <!-- Footer Section -->
+    <footer>
+      <h3>HTML Notes</h3>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h3>CSS Notes</h3>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10.html">Chapter 10</a>
+    </footer>
+      </body>
+      </html>
