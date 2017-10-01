@@ -1,0 +1,264 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>Text and Boxes</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1>HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10and11.html">Chapters 10 and 11</a>
+      <a href="chapter12and13.html">Chapters 12 and 13</a>
+      <a href="chapter14.html">Chapter 14</a>
+      <a href="chapter15.html">Chapter 15</a>
+      <a href="chapter16.html">Chapter 16</a>
+      <a href="chapter17.html">Chapter 17</a>
+      <a href="chapter18.html">Chapter 18</a>
+      <a href="chapter19.html">Chapter 19</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div class="chapter">
+      <h2>Chapter 12: Text</h2>
+        <p>This chapter covers the different formats and stylings you can use for
+          text.</p>
+    </div>
+    <div class="typeface">
+      <h4>Typeface</h4>
+      <p><strong>Serif:</strong> fonts that have extra details at the ends, easier
+        to read for long passages. Times Roman and Georgia are the most common.<br />
+        <Strong>Sans-Serif:</strong> fonts that do NOT have extra details at the ends.
+        Can be clearer to read. Helvetica and Arial are the most common.<br />
+        <strong>Monospace:</strong> fonts where all the letters have the same width.
+        Useful for coding since the letters will always align together. Courier is
+        a common font in this category.<br />
+        <strong>font-weight:</strong> Light, Medium, Bold, Black. Used for emphasis, can
+        also help to show contrast.<br />
+        <strong>font-style:</strong> Normal, Italic, Oblique. Italic gives the font a
+        more cursive style, while oblique just angles the font.<br />
+        <strong>font-stretch:</strong> Condensed, Regular, Extended. Condenses will make
+        the letters thinner and closer together, while extended makes the letters
+        wider and further apart.<br />
+        <br />
+        When choosing a font type, a font will only display when the font is already
+        installed on the viewers computer, or unless you add some code (explained later.)</p>
+    </div>
+    <div class="font">
+      <h4>Font Family</h4>
+      <p>Using <strong>font-family</strong> allows you to specify which font to use
+        on your page. Common practice is to list 3 items separated by commas. The first
+        should be the font you want to use, 2<sup>nd</sup> a backup font, and 3<sup>rd</sup>
+        the typeface incase the first 2 are unavailable. This way the viewers browser
+        can choose a font for them.<br />
+        <br />
+        font-family: Georgia, Times, serif;<br />
+        font-family: "Courier New", Courier, monospace;</p>
+    </div>
+    <div class="size">
+      <h4>Text Size</h4>
+      <p>There are 3 different methods to choosing a font size: pixels, percent, and em.<br />
+        font-size: 12px; Pixel is pretty self explanatory. Just choose the px size you want.
+        This is the most common method.<br />
+        font-size: 75%; Default pixel size is 16 px, so this code would change the font size to 12.
+        However, percentages do chain together. If you were to make all text inside the body
+        element 75% (12 px) and then created an addition rule for p tags to be 75%, then
+        all p elements inside the body element would be 9%.<br />
+        font-size: 1.5em; Em is useful for text size relative to parent (not used as much).
+        Below are some Examples of how each would look in code.<br />
+        body = 16px = 100% = 1em<br />
+        h3 = 18px = 133% = 1.125em<br />
+        h2 = 24px = 150% = 1.5em<br />
+        h1 = 32px = 200% = 2em</p>
+    </div>
+    <div class="face">
+      <h4>Font Face</h4>
+      <p>@font-face can be used to add a font to your page that a user does not
+        have installed. This code will tell the user's browser to download the font
+        from the given source. An easy way to do this is to go to
+        <a href="https://fonts.google.com/">This</a> webpage from Google. Once you
+        pick the font you want, you will see a code for you to embed into the
+        head element in your HTML document. Once you do that, you can use the
+        <strong>font-family</strong> property in your CSS document to choose the font
+        without the need to use @font-family.<br />
+        However, if you would rather upload your own font, you will need to upload
+        the font in 4 different formats: eot, woff, ttf/otf, svg. Below is an example
+        of how the code would look for a font titled ChunkFiveRegular.<br />
+          @font-face {<br />
+          font-family: 'ChunkFiveRegular';<br />
+          src: url('fonts/chunkfive.eot');<br />
+          src: url('fonts/chunkfive.eot?#iefix')<br />
+          format('embedded-opentype'),<br />
+          url('fonts/chunkfive.woff') format('woff'),<br />
+          url('fonts/chunkfive.ttf')<br />
+          format('truetype'),<br />
+          url('fonts/chunkfive.svg#ChunkFiveRegular')<br />
+          format('svg');}</p>
+    </div>
+    <div class="transformation">
+      <h4>Text Transformations and Effects</h4>
+      <p><strong>text-transform:</strong> uppercase, lowercase, capitalize;<br />
+        Capitalizes all letters, all letters are lowercase, and capitalizes the
+        first letter of each word.<br />
+        <strong>text-decoration:</strong> none, underline, overline, line-through, blink;<br />
+        These are all obvious, except blink. Blink causes the word to blink, and is
+        frowned upon due to this being extremely annoying.<br />
+        <strong>line-height:</strong> 1.4em;<br />
+        Line-height is interesting. Best used in em due to the fact that some users
+        will change the text size in browser. This changes the veritcal gap between lines
+        of text. Think of it like spacing from Microsoft Word.<br />
+        <strong>letter-spacing:</strong> and <strong>word-spacing:</strong> .4em;<br />
+        Kerning is the term used by typographers for the space between each letter.
+        The value given will be added on top of the default value specified by the font.
+        The default value between words is ~0.25em. You probably won't need to change
+        the space between words unless you increase letter spacing, and want to help
+        the text be a little more readable/<br />
+        <strong>text-align:</strong> left, right, center, justify;<br />
+        Aligns text to the left, right, or center. Justify dictates that every line
+        should take up the full width of the box, except the final line. Justified
+        text looks at the words on each individual line and creates an equal gap between
+        those words. Can look odd if you have larger words mixed in. Better to align left
+        most of the time.<br />
+        <strong>vertical-align:</strong> baseline, sub, super, top, text-top, middle,
+        bottom, text-bottom.<br />
+        Not intended to vertically align text in the middle of block elements like p
+        and div, but does have this effect when used in table cells. Its use is more for
+        inline elements like img, em, or strong.<br />
+        <strong>text-indent:</strong> 20px;
+        Used to indent the first line of text. Can use a negative value to push
+        text off of the browser window.<br />
+        <strong>text-shadow:</strong> 1px 1px 1px #000000;<br />
+        Takes 4 values: First value = length to the left or right shadow should fall.
+        Second value = distance to top or bottom shadow should fall. Third value (optional)
+        = amount of blue to apply. Fourth value = color. Might not be 100% supported
+        in every browser, when using make sure to test.</p>
+    </div>
+    <div class="pseudo">
+      <h4>Pseudo-Elements and Pseudo-Classes</h4>
+      <p>A pseudo-element acts like an extra element is in the code. Whereas a
+        pseudo-class acts like an extra value for a class attribute. You specify them
+        both at the end of the selector in your CSS code. The first 2 examples below
+        are pseudo-elements, and the rest are pseudo-classes.<br />
+        <strong>first-letter</strong> and <strong>first-line</strong><br />
+        used to only apply to the first letter or first line. Code looks like this:<br />
+        p.intro:first-letter {<br />
+        font-size: 200%; }<br />
+        p.intro:first-line {<br />
+        font-weight: bold; }<br />
+        <br />
+        <strong>:link :visited :hover :active</strong><br />
+        These are useful for links you have on your page. A common way to use these
+        is for changing the color, adding underlines, etc. Some sample code is below.<br />
+        a:link {<br />
+          color: deeppink;<br />
+          text-decoration: none;}<br />
+          a:visited {<br />
+          color: black;}<br />
+          a:hover {<br />
+          color: deeppink;<br />
+          text-decoration: underline;}<br />
+          a:active {<br />
+          color: darkcyan;}<br />
+        <br />
+        <strong>:hover :active :focus</strong><br />
+        Hover is used when the mouse cursor is placed over an item, such as a link
+        or a button. Active is when an element is being activated by the user (like a button.)
+        Focus occurs when a browser discovers that you are ready to interact with an
+        element on the page. For example, when your cursor is in a form input ready
+        to accept typing.<br />
+        Pseudo classes should be used in the following order:<br />
+        <ul>
+          <li>:link</li>
+          <li>:visited</li>
+          <li>:hover</li>
+          <li>:focus</li>
+          <li>:active</li>
+        </ul>
+      </p>
+    </div>
+    <div class="attribute-selectors">
+      <h4>Attribute Selectors</h4>
+      <p>Below are a set of attribute selectors that allow you to create rules that
+        apply to elements that have an attribute with a specific value.<br />
+        <table>
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col">Selector</th>
+              <th scope="col">Meaning</th>
+              <th scope="col">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Existence</th>
+              <td>[] - Matches a specific attribute, whatever its value.</td>
+              <td>p.[class] - Targets any p element with an attribute called class.</td>
+            </tr>
+            <tr>
+              <th scope="row">Equality</th>
+              <td>[=] - Matches a specific attribue with a specific value.</td>
+              <td>p[class="dog"] - Targets any p element with an attribute whose class value is dog.</td>
+            </tr>
+            <tr>
+              <th scope="row">Space</th>
+              <td>[~=] - Matches a specific attribute whose value appears in a space separated
+                list of words.</td>
+              <td>p[class~="dog"] - Targets any p element with an attribute class whose value
+                is a list of separated words, one of which is dog.</td>
+            </tr>
+            <tr>
+              <th scope="row">Prefix</th>
+              <td>[^=] - Matches a specific attribute whose value begins with a specific string.</td>
+              <td>p[attr^"d"] - Targets any p element with an attribute whose value begins with "d".</td>
+            </tr>
+            <tr>
+              <th scope="row">Substring</th>
+              <td>[*=] - Matches a specific attribute whose value contains a specific substring.</td>
+              <td>p[attr*"do"] - Targets any p element with an attribute whose value contains the letters "do".</td>
+            </tr>
+            <tr>
+              <th scope="row">Suffix</th>
+              <td>[$=] - Matches a specific attribute whose value ends with a specific string.</td>
+              <td>p[attr$"g"] - Targets any p element with an attribute whose value ends with "g".</td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+    </div>
+    <hr />
+      <!-- Footer Section -->
+    <footer>
+      <h3>HTML Notes</h3>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h3>CSS Notes</h3>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10and11.html">Chapters 10 and 11</a>
+      <a href="chapter12and13.html">Chapters 12 and 13</a>
+      <a href="chapter14.html">Chapter 14</a>
+      <a href="chapter15.html">Chapter 15</a>
+      <a href="chapter16.html">Chapter 16</a>
+      <a href="chapter17.html">Chapter 17</a>
+      <a href="chapter18.html">Chapter 18</a>
+      <a href="chapter19.html">Chapter 19</a>
+    </footer>
+    </body>
+    </html>
