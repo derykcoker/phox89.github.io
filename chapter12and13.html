@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Text and Boxes</title>
@@ -190,10 +190,9 @@
       <h4>Attribute Selectors</h4>
       <p>Below are a set of attribute selectors that allow you to create rules that
         apply to elements that have an attribute with a specific value.<br />
-        <table>
+        <table border="1">
           <thead>
             <tr>
-              <td></td>
               <th scope="col">Selector</th>
               <th scope="col">Meaning</th>
               <th scope="col">Example</th>
@@ -235,6 +234,100 @@
           </tbody>
         </table>
       </p>
+    </div>
+    <div class="chapter">
+      <h2>Chapter 13: Boxes</h2>
+      <p>This chapter covers how boxes work. Padding, margins, etc.</p>
+    </div>
+    <div class="dimensions">
+      <h4>Box Dimension</h4>
+      <p>Using <strong>height:</strong> and <strong>width:</strong> you can control
+        the size of your boxes that contain elements. You can specify by pixels,
+        percent, or ems. Percentages size will be used based on the "parent box." so is
+        a p element is set to 75% inside a div element set to 400x400 pixels, the box for
+        the p element would be 300x300 pixels. When using ems, the size of the box depends
+        on the size of the text within. Developers have started to use percentages and ems
+        more lately to accomodate more devices.<br />
+        You can also use <strong>min-width, max-width, min-height</strong> and
+        <strong>max-height</strong> to set minimum/maximum values for boxes. min/max-width
+        are both useful for smaller screens.<br />
+        If the boxes are set too smal to fit all of the content, you can use the
+        <strong>overflow:</strong> property. The values you can use are hidden (to hide
+        the overflowing content) or scroll (to add a scrollbar to the box.) You can also
+        use visible, but if the box is already overflowing and overflow is not being used,
+        then there isn't really a point.</p>
+    </div>
+    <div class="border">
+      <h4>Borders, Margins, and Padding</h4>
+        <p>some people can really struggle with this subject. Before explaining,
+          a good example of each can be found <a href="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/diagram-boxmodel.svg">
+          here.</a> Basically, border is the outside of the box. Margins refer to
+          the space between neighboring boxes. Padding refers to the space between
+          the border and the content inside the box.<br />
+          <strong>border-width</strong> can be specified in a few ways. The first way
+          is to define one pixel size, such as <strong>border-width: 5px;</strong>
+          You can also thin, medium, or thick. The final way is similar to the first.
+          If you define 2 pixel sizes, then the first will define the top and bottom,
+          and the second the left and right. If you define 4 pixel sizes, then you can
+          define each side. The order is clockwise starting from the top (top, right, bottom, left.)<br />
+          <strong>border-style</strong> allows you to give the border a different look.
+          Just simply type <strong>border-style: solid;</strong> There are a many
+          different styles, which can be seen <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values">here.</a><br />
+          <strong>border-color</strong> is self explanatory. It follows the same rules as above
+          as far as coloring each side or altogether, but you must use RGB or a hex value.<br />
+          You can combine these 3 together into one statement by writing them in the
+          same as order as presented above.<br />
+          border: 5px dotted #8f7c6a;<br />
+          <br />
+          <strong>Padding</strong> and <strong>margin</strong> are usually specified
+          in pixels, but you can use percentages or ems instead if you would rather.
+          It's important to remember that if you specify a box to be 200 pixels wide,
+          the content will be automatically scaled based on the padding size, and border
+          size. When one box is sitting under another, the larger margin will be used
+          insted of adding them together. So if one box with a 15 pixel margin is sitting
+          above a box with a 25 pixel margin, the space between the boxes will only be 25 pixels.</p>
+    </div>
+    <div class="styling">
+      <h4>Styling Content</h4>
+        <strong>Centering</strong> a box on a page is pretty simple. You just need
+        to set the left and right margins to "auto." When doing this, make sure to set
+        a width for the box, otherwise it will be the width of the entire page.
+        It's a good idea to also add <strong>text-aling: center;</strong> to any text
+        inside a centered box, for older browsers.<br />
+        <strong>display</strong> can be used to change inline elements to block, and vice
+        versa. With the display property, you can use the following values: block, inline,
+        none, and inline-block. None hides the block from the page, while inline-block
+        allows block level elements to flow like inline, but still retain block features.
+        Go back to page 317 for more info. You can also use <strong>visibility: hidden;
+        </strong> to hide a block. When using this method, the space intended for
+        the block wil still show though.<br />
+        <strong>border-image</strong> can be used to have a custom image used for the border.
+        You will have to specify 3 things: the url for the image, where to slice the image,
+        and what to do with straight images. You can choose stretch to stretch the image,
+        repeat to repeat it, or round to try to repeat the image, but scaled so it will
+        fit perfectly. The code will look like this following:<br />
+        <strong>border-image: url("imagesource.jpg") 10 10 10 10 round;</strong><br />
+        You can also add "-moz-" and "-webkit-" as a prefix to border-image to help
+        with compability with earlier browser versions. It's a good idea to have 3 total
+        lines: one with moz, one with webkit, and one normal.<br />
+        <strong>box-shadow</strong> functions similar to border-image. It also lends
+        syntax from text-shadow. You must use the first 2 of the 4 total values
+        (horizontal offset, vertical offset, blur distance, shadow spread.) You can
+        also use the <strong>inset</strong> value at the beginning to create a shadow
+        inside the box. This code will look like <strong>box-shadow: 5px 5px 5px 5px #FFF777;</strong>
+        As with border-image, it's best to create 3 lines using "-moz-" and "-webkit-"<br />
+        <strong>Rounded</strong> and <strong>elliptical</strong> borders are fairly simple.
+        To round all the corners all you need to do is type <strong>border-radius: 5px;</strong>
+        (As with the previous 2 lines of code, use moz and webkit.) To create a full circle,
+        you just have to set the border radius to the same height as the box. You can create elipses
+        by specifying each corner individually with <strong>border-top-left-radius:</strong>
+        or something similar for each corner. When doing this, you can use one value for an evenly
+        rounded corner, or 2 values. When you using 2 values. like 25px and 50px, the corner will
+        round at 50 px wide, but 25 px tall.<br />
+        You can do this in a shorthand version by specifying 4 horizontal values and
+        4 vertical values all in one line. This will require further testing on jsfiddle to
+        get a feel for how it works, but the code will look like this:
+        <strong>border-radius: 1em 4em 1 em 4em / 2em 1em 2em 1em;</strong></p>
     </div>
     <hr />
       <!-- Footer Section -->
