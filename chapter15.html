@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1>HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10and11.html">Chapters 10 and 11</a>
+      <a href="chapter12and13.html">Chapters 12 and 13</a>
+      <a href="chapter14.html">Chapter 14</a>
+      <a href="chapter15.html">Chapter 15</a>
+      <a href="chapter16.html">Chapter 16</a>
+      <a href="chapter17.html">Chapter 17</a>
+      <a href="chapter18.html">Chapter 18</a>
+      <a href="chapter19.html">Chapter 19</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div>
+      <h2>Chapter 15: Layout</h2>
+      <p>This is possibly the most important chapter. Most of the information
+        here is used to teach you how to create a layout for your webpage. Styling
+        blocks into the correct space/slot that you want.</p>
+    </div>
+    <div>
+      <h4>Key Concepts</h4>
+      <p>Before digging in, let's review block and inline elements. Block elements
+        start on a new line and act as the main building blocks. Inline boxes flow
+        between surrounding text. Remember you can use borders, padding, and margins
+        to separate boxes.<br />
+        When one block element sits inside another block element, the containing
+        element is known as the containing element, or parent element. For example,
+        a p element inside a div element. The div is the parent (or containing) and
+        p is the child.<br />
+        There are 3 positioning schemes: normal flow, relative positioning, and
+        absolute positioning. You also should know the difference between Fixed Positioning
+        and Floating Elements. Fixed Positioning is a form of absolute positioning in which
+        the position of the element is based on the browser window, as opposed to the
+        containing element. They do not effect the positioning of surrounding elements.
+        Floating Elements allow you to take an element out of normal flow, and position
+        it to the far right or left of a containing box. The floating element becomes a block
+        level element that allows other content to flow around.<br />
+        Also remember, when moving a box from normal flow, boxes can sometimes overlap.
+        Use the z-index property to control which box appears on top.</p>
+      <h5>Normal Flow</h5>
+      <p>In normal flow, each blcok level sits on top of another. This is the default
+        way that browsers treat HTML. It's unnecessary to specify this in CSS, but if
+        you are ever inclined to do so, the syntax is:<br />
+        <strong>position: static;</strong></p>
+      <h5>Relative Positioning</h5>
+        <p><strong>position: relative;</strong> will allow you to move an element
+          where it would have been in relation to normal flow. You can move a box
+          horizontally with left or right properties, and up and down with top and
+          bottom properties. The values can be given in pixels, ems, or percent.</p>
+      <h5>Absolute Positioning</h5>
+        <p><strong>position: absolute;</strong> will take the box out of normal flow.
+          This box will no longer have an affect on positioning of other elements. The
+          other boxes will act as if this box is not even there.</p>
+      <h5>Fixed Positioning</h5>
+        <p><strong>position: fixed;</strong> is a type of absolute positioning. This will
+          set an element into a fixed position on the browser. An example would be a
+          header that stays at the top of the window when you're scrolling through the page.
+          You still need to use the box offset properties (top, bottom, right, left) to
+          place the box in the proper location.</p>
+      <h5>Overlapping Elements</h5>
+        <p><strong>z-index:</strong> is used to give boxes a way to decide which one is on top. A
+          larger number will bring the box closer to the front, while a smaller number will
+          push a box further to the back. Relative, absolute, and fixed positioning can all
+          have issues with boxes overlapping. So if you run into this issue, using z-index
+          will keep your boxes organized.</p>
+    </div>
+    <div>
+      <h4>Flow</h4>
+      
