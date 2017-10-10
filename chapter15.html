@@ -36,7 +36,7 @@
         blocks into the correct space/slot that you want.</p>
     </div>
     <div>
-      <h4>Key Concepts</h4>
+      <h3>Key Concepts</h3>
       <p>Before digging in, let's review block and inline elements. Block elements
         start on a new line and act as the main building blocks. Inline boxes flow
         between surrounding text. Remember you can use borders, padding, and margins
@@ -55,27 +55,27 @@
         level element that allows other content to flow around.<br />
         Also remember, when moving a box from normal flow, boxes can sometimes overlap.
         Use the z-index property to control which box appears on top.</p>
-      <h5>Normal Flow</h5>
+      <h4>Normal Flow</h4>
       <p>In normal flow, each blcok level sits on top of another. This is the default
         way that browsers treat HTML. It's unnecessary to specify this in CSS, but if
         you are ever inclined to do so, the syntax is:<br />
         <strong>position: static;</strong></p>
-      <h5>Relative Positioning</h5>
+      <h4>Relative Positioning</h4>
         <p><strong>position: relative;</strong> will allow you to move an element
           where it would have been in relation to normal flow. You can move a box
           horizontally with left or right properties, and up and down with top and
           bottom properties. The values can be given in pixels, ems, or percent.</p>
-      <h5>Absolute Positioning</h5>
+      <h4>Absolute Positioning</h4>
         <p><strong>position: absolute;</strong> will take the box out of normal flow.
           This box will no longer have an affect on positioning of other elements. The
           other boxes will act as if this box is not even there.</p>
-      <h5>Fixed Positioning</h5>
+      <h4>Fixed Positioning</h4>
         <p><strong>position: fixed;</strong> is a type of absolute positioning. This will
           set an element into a fixed position on the browser. An example would be a
           header that stays at the top of the window when you're scrolling through the page.
           You still need to use the box offset properties (top, bottom, right, left) to
           place the box in the proper location.</p>
-      <h5>Overlapping Elements</h5>
+      <h4>Overlapping Elements</h4>
         <p><strong>z-index:</strong> is used to give boxes a way to decide which one is on top. A
           larger number will bring the box closer to the front, while a smaller number will
           push a box further to the back. Relative, absolute, and fixed positioning can all
@@ -83,5 +83,109 @@
           will keep your boxes organized.</p>
     </div>
     <div>
-      <h4>Flow</h4>
-      
+      <h3>Flow</h3>
+        <p>The <strong>float</strong> property allows you to take an element in normal
+          flow and push it as far to the right or the left as possible. Anything else
+          inside the containing element will flow around the floated element. So, the
+          values you can use are left and right. You should also always define a width
+          for the floated element, so that it will not span the width of the page.</p>
+      <h4>Columns</h4>
+        <p>You can use float to make boxes sit side by side as if they're columns. with
+          the following code, you'll be able to create columns that side side by side.<br />
+          <br />
+          body {<br />
+            width: 750px;<br />
+            font-family: Arial, Verdana, sans-serif;<br />
+            color: #665544;}<br />
+            p {<br />
+            width: 230px;<br />
+            float: left;<br />
+            margin: 5px;<br />
+            padding: 5px;<br />
+            background-color: #efefef;}<br />
+          <br />
+          Although this code does work, there is one issue. The 4th column will
+          sit underneath the 3rd column. You can fix this by using the <strong>clear
+          </strong> property. You can give it values of left, right, both, or none. This
+          property allows you to tell a box that it can't touch other boxes on the
+          defined side. For example, since the 4th paragraph sits under the 3rd instead
+          of starting a new column, you can give it a  class "clear" and give that class
+          a declaration of <strong>clear: left;</strong> Now the element will nnot be
+          allowed to touch any other element within the containing element on the left
+          side.<br />
+          If a containing element only contains floated elements, some browsers will
+          treat it as if it is zero pixels tall. You can fix this by assigning the containing
+          element a few declarations. Add in <strong>overflow: auto;</strong> as well
+          as <strong>width: 100%</strong> to fix this. In the book on page 373, you can
+          see a div element that looks like 2 lines because of this issue.<br />
+          <br />
+          In order to create multiple columns, many pages will achieve this by create multiple
+          div elements. Give each a class name like "column1of2" or whatever you feel
+          is appropriate, then assign each a width property, float property, and margins.
+        </p>
+    </div>
+    <div>
+      <h3>Layout</h3>
+      <p>There are 2 types of layouts, Fixed Width and Liquid.</p>
+      <h4>Fixed Width Layout</h4>
+      <p>Fixed width layouts do not change size based on the size of the screen.
+        Measurements are usually fiven in pixels.<br />
+        <strong>Advantages:</strong>
+        <ul>
+          <li>Pixel values are accurate at controlling element sizes and positioning.</li>
+          <li>Far greater control with appearance and position of items on the page.</li>
+          <li>You can control length of lines of text regardless of size of user's window.</li>
+          <li>Size of an image will always remain the same relative to rest of page.</li>
+        </ul>
+        <strong>Disadvantages</strong>
+          <ul>
+            <li>Can end up with big gaps at edge of page.</li>
+            <li>If the user's screen is higher res than designer's screen, page can look
+              smaller and text can be more difficult to read.</li>
+            <li>If user increases text size, text might not fit into allotted spaces.</li>
+            <li>Design works best on devices that have similar resolutions to desktops
+              or laptops.</li>
+            <li>Page will often take up more vertical space than a liquid layout.</li>
+          </ul>
+        To create a fixed width layout, the width of boxes will usually be specified in
+        pixels. Sometimes the height will be as well. <a href="chapter15ex1.html">Here</a> is
+        an example page from the book. Make sure you change the size of the browser window to
+        see how it changes.<br />
+        The body element is fixed to 960 pixels, centered by setting left right margins to auto.
+        Main boxes on the page have a margin of 10 to create a gap. Nav, feature, and footer
+        panels stretch to width of containing element (ion this casethe body element) so
+        there is no need to define a width for them. 3 Columns are all 300 pixels
+        wide and use the float property to sit next to each other.
+      </p>
+      <h4>Liquid Layout</h4>
+      <p>Liquid layouts will change based on the size of the browser window.<br />
+        <strong>Advantages:</strong>
+        <ul>
+          <li>Pages expand to fill entire browser window, no spaces around the page on larger screens.</li>
+          <li>If user has a small window, the page can contract to fit everything.</li>
+          <li>Design is tolerant of the user setting custom font sizes.</li>
+        </ul>
+        <strong>Disadvantages:</strong>
+          <ul>
+            <li>If you don't control width of sections, design can look different than intended.
+              Unexpected gaps, items squashed together, etc.</li>
+            <li>If user has a wide window, lines of text can become longer and harder to read.</li>
+            <li>If user has a narrow window, words can be squashed together and may only have
+              a few words on each line.</li>
+            <li>If a fixed width item, like an image, is in a box too small to hold it, then
+              the image can overflow onto text.</li>
+          </ul>
+        It's usually best to only let parts of the pages expand or contract. A liquid layout
+        is uaually specified in percentages rather than pixels.<a href="chapter15ex2.html">Here</a>
+        is an example of a liquid layout. As before, make sure you change browser window
+        size so you can see the effects.<br />
+        The body element is set to 90% so there's a small gap between the edge of the page.
+        The 3 columns are all given a margin of 1% and a width of 31.3%. Adds up to 99.9%
+        of the body element, so some browsers may not align the right hand column properly.
+        Div element for nav, features, and footer will stretch to width of the body, they
+        were given a 1% margin to help them algign with the columns.<br />
+        Although they weren't used in this example, you can see how the min-width and
+        max-width properties can be useful to limit how much elements can stretch or contract.
+      </p>
+      <h4>Layout Grids</h4>
+      <p>
