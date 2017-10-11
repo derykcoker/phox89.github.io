@@ -195,5 +195,78 @@
         information on new pages, makes it easier to add new content in a consistent way,
         and helps people collaborate consistently.
       </p>
-      <h4>Frameworks</h4>
-      <p>391
+    </div>
+    <div>
+      <h3>Frameworks</h3>
+      <p>Frameworks provide code for common tasks. You can include the framework
+        code in your projects instead of writing the CSS from scratch.<br />
+        <strong>Advantages:</strong>
+        <br />
+        <ul>
+          <li>Save time from repeatedly writing code for the same tasks.</li>
+          <li>Tested across different browser versions, helps avoid browser bugs.</li>
+        </ul>
+        <br />
+        <strong>Disadvantages:</strong>
+        <br />
+        <ul>
+          <li>Often require using specific class names in HTML code, making it harder
+            to identify what the class is for.</li>
+          <li>Often contain more code than you need, to satisfy a wide variety of needs
+            (often referred to as "bloat" code.)</li>
+        </ul>
+      </p>
+      <h4>960.GS</h4>
+      <p><a href="https://960.gs/">960 Grid System</a> is a very popular framework
+        used for websites. <a href="http://getbootstrap.com/">Bootstrap</a> is another
+        popular framework, but we will elarn more about that later on once we start
+        learning javascript. You can download 960.gs if you would like, but for right
+        now it's best to learn how to code what you want manually, to solidify a better
+        foundation.
+      </p>
+      <h4>Multiple Style Sheets</h4>
+      <p>You can split up your CSS code into multiple style sheets. An example would
+        be using one to control layout, one for fonts, one for colors, etc. You can also
+        take a more modular approach, and create separate ones for layout, typography,
+        forms, tables, website sub-sections, etc.<br />
+        There are 2 ways to use multiple stylesheets:<br />
+        <ol>
+          <li>HTML page can link one CSS file, then that CSS file can use the @import rule
+            to import multiple style sheets. <strong>@import url("tables.css");</strong></li>
+          <li>In the HTML code you can use a separate link element for each stylesheet.
+          <strong>&#60link rel="stylesheet" type="text/css" href="tables.css"&#62</li>
+        </ol>
+        When using @import, these rules should appear at the top of the document before
+        any other rules. When linking multiple stylesheets together via HTML, it's
+        important to remember that rules that appear later in the document will take
+        precedence over previous rules.<br />
+        <a href="chapter15ex3.html">Here</a> is one final example straight from the
+        book. This page was created using 960 grid system.
+      </p>
+    </div>
+    <hr />
+      <!-- Footer Section -->
+    <footer>
+      <h3>HTML Notes</h3>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h3>CSS Notes</h3>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10and11.html">Chapters 10 and 11</a>
+      <a href="chapter12and13.html">Chapters 12 and 13</a>
+      <a href="chapter14.html">Chapter 14</a>
+      <a href="chapter15.html">Chapter 15</a>
+      <a href="chapter16.html">Chapter 16</a>
+      <a href="chapter17.html">Chapter 17</a>
+      <a href="chapter18.html">Chapter 18</a>
+      <a href="chapter19.html">Chapter 19</a>
+    </footer>
+    </body>
+    </html>
