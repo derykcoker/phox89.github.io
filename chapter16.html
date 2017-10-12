@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Images</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <h1>HTML Notes</h1>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h1>CSS Notes</h1>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10and11.html">Chapters 10 and 11</a>
+      <a href="chapter12and13.html">Chapters 12 and 13</a>
+      <a href="chapter14.html">Chapter 14</a>
+      <a href="chapter15.html">Chapter 15</a>
+      <a href="chapter16.html">Chapter 16</a>
+      <a href="chapter17.html">Chapter 17</a>
+      <a href="chapter18.html">Chapter 18</a>
+      <a href="chapter19.html">Chapter 19</a>
+    </nav>
+    <hr />
+    <!-- Main Body Notes -->
+    <div>
+      <h2>Chapter 16: Images</h2>
+      <p>This chapter focuses on how to size and align images affectively
+        in your HTML page.</p>
+    </div>
+    <div>
+      <h3>Size and Alignment</h3>
+      <p>To control the size of an image, you use the height and width properties
+        like you would with other boxes. A good idea is to create classes for
+        image sizes you would like to use (like small, medium, large) then define
+        them in CSS with img.small, img.medium, img.large. When added images through
+        html, just define the image with whichever class you would like to use.<br />
+        Aligning images is done in a similar way. In HTML code the image will be given
+        two classes: align-left or align-right, and then the size. In CSS you create
+        a rule for img.align-left that includes float:left. You then create another for
+        align-right. So in HTML the code would be:<br />
+        &#60img src="imgsrc.jpg" class="align-left medium' alt="whatever"&#62<br />
+        Then in CSS you would add<br />
+        img.align-left {<br />
+          float: left;<br />
+          margin: 10px;}<br />
+        Adding a margin in is a great idea to keep everything separated.<br />
+        By default, images are inline elements. If you would like to center one,
+        you would have to convert it to a block level element by using <strong>
+        display: block;</strong> in your CSS file (best to give the image a class
+        such as align-center.) After that has been done, there are 2 ways to center
+        the image:<br />
+        Use text-align: center; on the containing element, or<br />
+        On the image itself, set the left and right margins to auto.<br />
+      </p>
+    </div>
+    <div>
+      <h3>Background Images</h3>
+      <p>You can use <strong>background-image: url("image.jpg");</strong> to set
+        the background image for a box. If you set it to be the body element, it
+        will be the background for the entire page. Background images are usually the
+        last thing to load, so larger images are usually not recommended.<br />
+        <strong>background-repeat:</strong> and <strong>background-attachment:</strong>
+        are pretty self explanatory. Repeat can have 4 values: repeat (repeats
+        on x and y axes,) repeat-x(repeats on x axis,) repeat-y(repeats on y axis,)
+        and no-repeat. Attachment can have 2 values: fixed (background image stays in
+        one spot) or scroll (image moves up and down as user scrolls on the page.)<br />
+        <strong>background-position:</strong> can be used to position the image.
+        You define it with 2 values: the first being the horizontal location (left,
+        center, right) and the second the vertical (top, center, bottom.) You can
+        also specify pixels, or a percentage. 0% 0% would be the top left. 50% 50%
+        would center the image.
+      </p>
+      <h4>Background Shorthand</h4>
+      <p>If you would like to combine these into one declaration, you can use them
+        all with the property <strong>background:</strong> You must use them in the
+        following order (although you can skip one if you would like):<br />
+        <ul>
+          <li>background-color:</li>
+          <li>background-image:</li>
+          <li>background-repeat:</li>
+          <li>background-attachment:</li>
+          <li>background-position:</li>
+        </ul>
+        So all put into one rule would look like:<br />
+        <strong>background: #ffffff url("image.jpg") repeat scroll left top;</strong><br />
+        If you would like to use a gradient for the background,
+        <a href="https://www.w3schools.com/css/css3_gradients.asp">here</a> is a great
+        write-up on all the things you will need depending on browser. It's a fairly
+        straight-forward process.
+      </p>
+    </div>
+    <hr />
+      <!-- Footer Section -->
+    <footer>
+      <h3>HTML Notes</h3>
+      <hr />
+      <a href="index.html">Home</a>
+      <a href="cahtml.html">Code Academy HTML</a>
+      <a href="chapter1and2.html">Chapters 1 and 2</a>
+      <a href="chapter3and4.html">Chapters 3 and 4</a>
+      <a href="chapter5and6.html">Chapters 5 and 6</a>
+      <a href="chapter7and8.html">Chapters 7 and 8</a>
+      <a href="chapter9.html">Chapter 9</a>
+      <hr />
+      <h3>CSS Notes</h3>
+      <a href="cacss.html">Code Academy CSS</a>
+      <a href="chapter10and11.html">Chapters 10 and 11</a>
+      <a href="chapter12and13.html">Chapters 12 and 13</a>
+      <a href="chapter14.html">Chapter 14</a>
+      <a href="chapter15.html">Chapter 15</a>
+      <a href="chapter16.html">Chapter 16</a>
+      <a href="chapter17.html">Chapter 17</a>
+      <a href="chapter18.html">Chapter 18</a>
+      <a href="chapter19.html">Chapter 19</a>
+    </footer>
+  </body>
+</html>
